@@ -11,9 +11,9 @@
 <x-dc>
 <helmet>
 <title>予澄中醫診所 | 台中中醫美顏・身心調理</title>
-<meta name="description" content="予澄中醫診所｜台中西區中醫美顏・美顏針灸・顏面筋膜調理・身心調理。預約制看診，由中醫師林予澄評估臉部張力與身體狀態，找到適合你的調理方式。" />
+<meta name="description" content="予澄中醫診所｜台中西區中醫美顏・美顏針・顏面筋膜調理・身心調理。預約制看診，由中醫師林予澄評估臉部張力與身體狀態，找到適合你的調理方式。" />
 <meta property="og:title" content="予澄中醫診所｜台中中醫美顏・身心調理" />
-<meta property="og:description" content="不追求改變你的臉，而是讓疲憊慢慢從臉上退去。從美顏針灸開始，找回自然、放鬆的狀態。" />
+<meta property="og:description" content="不追求改變你的臉，而是讓疲憊慢慢從臉上退去。從美顏針開始，找回自然、放鬆的狀態。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yucheng-tcm.com/" />
 <meta property="og:image" content="https://yucheng-tcm.com/assets/hero.webp" />
@@ -55,6 +55,8 @@
   }
   #yc-booking h2, #yc-booking p, #yc-services > div > div:first-child h2, #yc-process [data-step-copy], #yc-general article h3, #yc-general article p { margin-inline: auto; }
   @media (max-width: 700px) {
+    #yc-process h2 { text-align: center; }
+    #yc-process > div > a { display: flex; width: fit-content; margin-inline: auto; }
     #yc-services article { grid-template-columns: 1fr !important; justify-items: center; }
     #yc-services [data-svc-txt] h3, #yc-services [data-svc-txt] p { margin-inline: auto; }
     #yc-services [data-svc-img] { order: -1; }
@@ -79,6 +81,36 @@
     #yc-gallery > img { grid-column: auto !important; grid-row: auto !important; aspect-ratio: 1.4/1 !important; height: auto !important; }
     #yc-gallery > img[alt="牆面光影與植物"] { aspect-ratio: 1/1 !important; }
   }
+  @media (max-width: 899px) {
+    #yc-process h2 { text-align: center; }
+    #yc-process > div > a { display: flex; justify-content: center; width: fit-content; margin-inline: auto; }
+    #yc-what [data-what-grid] { grid-template-columns: 1fr !important; }
+    #yc-what [data-what-grid] > div { max-width: 320px; margin-inline: auto; padding: 26px 30px !important; }
+  }
+  @media (min-width: 900px) {
+    #yc-what [data-what-grid] { grid-template-columns: repeat(4, minmax(0,1fr)) !important; }
+  }
+  #yc-hero, #yc-concerns, #yc-what, #yc-areas, #yc-services, #yc-process, #yc-general, #yc-doctor, #yc-space, #yc-faq, #yc-visit, #yc-booking { position: relative; }
+  [data-wave]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: clamp(26px,3.6vw,54px); background-repeat: no-repeat; background-size: 100% 100%; pointer-events: none; z-index: 3; }
+  #yc-hero::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C34%20C180%2C58%20340%2C6%20520%2C20%20C700%2C34%20860%2C66%201060%2C44%20C1220%2C26%201340%2C8%201440%2C26%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23EFE5DA%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-concerns::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C20%20C160%2C4%20300%2C46%20480%2C52%20C660%2C58%20820%2C18%201000%2C14%20C1180%2C10%201320%2C40%201440%2C34%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FAF6F0%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-what::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C44%20C200%2C20%20380%2C54%20560%2C46%20C740%2C38%20880%2C6%201080%2C16%20C1250%2C25%201350%2C46%201440%2C38%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FDFBF8%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-areas::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C28%20C140%2C52%20320%2C52%20500%2C32%20C680%2C12%20860%2C26%201040%2C40%20C1200%2C52%201340%2C44%201440%2C22%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FAF6F0%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-process::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C34%20C180%2C58%20340%2C6%20520%2C20%20C700%2C34%20860%2C66%201060%2C44%20C1220%2C26%201340%2C8%201440%2C26%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23E8D5C8%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-general::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C20%20C160%2C4%20300%2C46%20480%2C52%20C660%2C58%20820%2C18%201000%2C14%20C1180%2C10%201320%2C40%201440%2C34%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23EFE5DA%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-doctor::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C44%20C200%2C20%20380%2C54%20560%2C46%20C740%2C38%20880%2C6%201080%2C16%20C1250%2C25%201350%2C46%201440%2C38%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FAF6F0%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-space::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C28%20C140%2C52%20320%2C52%20500%2C32%20C680%2C12%20860%2C26%201040%2C40%20C1200%2C52%201340%2C44%201440%2C22%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FDFBF8%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-faq::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C34%20C180%2C58%20340%2C6%20520%2C20%20C700%2C34%20860%2C66%201060%2C44%20C1220%2C26%201340%2C8%201440%2C26%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23FAF6F0%22%2F%3E%3C%2Fsvg%3E"); }
+  #yc-booking { margin-top: calc(-1 * clamp(26px,3.6vw,54px));
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C20%20C160%2C4%20300%2C46%20480%2C52%20C660%2C58%20820%2C18%201000%2C14%20C1180%2C10%201320%2C40%201440%2C34%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#fff,#fff);
+    -webkit-mask-size: 100% clamp(26px,3.6vw,54px), 100% calc(100% - clamp(26px,3.6vw,54px) + 1px);
+    -webkit-mask-position: top left, bottom left;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C20%20C160%2C4%20300%2C46%20480%2C52%20C660%2C58%20820%2C18%201000%2C14%20C1180%2C10%201320%2C40%201440%2C34%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#fff,#fff);
+    mask-size: 100% clamp(26px,3.6vw,54px), 100% calc(100% - clamp(26px,3.6vw,54px) + 1px);
+    mask-position: top left, bottom left;
+    mask-repeat: no-repeat, no-repeat; }
+  #yc-booking::after { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%2080%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C44%20C200%2C20%20380%2C54%20560%2C46%20C740%2C38%20880%2C6%201080%2C16%20C1250%2C25%201350%2C46%201440%2C38%20L1440%2C80%20L0%2C80%20Z%22%20fill%3D%22%2351443E%22%2F%3E%3C%2Fsvg%3E"); }
   @media (prefers-reduced-motion: reduce) {
     [data-anim] { animation: none !important; }
     [data-reveal] { opacity: 1 !important; transform: none !important; }
@@ -88,17 +120,17 @@
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":["MedicalClinic","LocalBusiness"],"@id":"https://yucheng-tcm.com/#clinic","name":"予澄中醫診所","alternateName":"Yucheng TCM Clinic","description":"台中中醫美顏・美顏針灸・顏面筋膜調理・身心調理，預約制看診。","url":"https://yucheng-tcm.com/","image":"https://yucheng-tcm.com/assets/hero.webp","telephone":"+886-4-2326-2188","email":"hello@yucheng-tcm.com","priceRange":"$$","medicalSpecialty":"TraditionalChineseMedicine","address":{"@type":"PostalAddress","streetAddress":"公益路 68 號","addressLocality":"西區","addressRegion":"台中市","addressCountry":"TW"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:30"}],"availableService":[{"@type":"MedicalTherapy","name":"美顏針灸"},{"@type":"MedicalTherapy","name":"顏面筋膜調理"},{"@type":"MedicalTherapy","name":"頭顏調理"},{"@type":"MedicalTherapy","name":"睡眠・壓力調理"}],"employee":{"@id":"https://yucheng-tcm.com/#physician"}},
+{"@type":["MedicalClinic","LocalBusiness"],"@id":"https://yucheng-tcm.com/#clinic","name":"予澄中醫診所","alternateName":"Yucheng TCM Clinic","description":"台中中醫美顏・美顏針・顏面筋膜調理・身心調理，預約制看診。","url":"https://yucheng-tcm.com/","image":"https://yucheng-tcm.com/assets/hero.webp","telephone":"+886-4-2326-2188","email":"hello@yucheng-tcm.com","priceRange":"$$","medicalSpecialty":"TraditionalChineseMedicine","address":{"@type":"PostalAddress","streetAddress":"公益路 68 號","addressLocality":"西區","addressRegion":"台中市","addressCountry":"TW"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:30"}],"availableService":[{"@type":"MedicalTherapy","name":"美顏針"},{"@type":"MedicalTherapy","name":"顏面筋膜調理"},{"@type":"MedicalTherapy","name":"頭顏調理"},{"@type":"MedicalTherapy","name":"睡眠・壓力調理"}],"employee":{"@id":"https://yucheng-tcm.com/#physician"}},
 {"@type":"Physician","@id":"https://yucheng-tcm.com/#physician","name":"林予澄 中醫師","jobTitle":"中醫師","medicalSpecialty":"TraditionalChineseMedicine","knowsAbout":["中醫美顏","顏面針灸","體質調理"],"worksFor":{"@id":"https://yucheng-tcm.com/#clinic"}},
 {"@type":"WebSite","@id":"https://yucheng-tcm.com/#website","url":"https://yucheng-tcm.com/","name":"予澄中醫診所","inLanguage":"zh-Hant-TW","publisher":{"@id":"https://yucheng-tcm.com/#clinic"}},
 {"@type":"FAQPage","@id":"https://yucheng-tcm.com/#faq","mainEntity":[
-{"@type":"Question","name":"美顏針灸會痛嗎？","acceptedAnswer":{"@type":"Answer","text":"多數人在施針時會感受到輕微刺感、痠感或局部脹感，通常是短暫的。臉部不同位置的敏感度不一樣，每個人的感受也會不同；療程中若有明顯不適，可以隨時告知醫師調整。"}},
+{"@type":"Question","name":"美顏針會痛嗎？","acceptedAnswer":{"@type":"Answer","text":"多數人在施針時會感受到輕微刺感、痠感或局部脹感，通常是短暫的。臉部不同位置的敏感度不一樣，每個人的感受也會不同；療程中若有明顯不適，可以隨時告知醫師調整。"}},
 {"@type":"Question","name":"做完會瘀青嗎？","acceptedAnswer":{"@type":"Answer","text":"臉部微血管較多，少數人施針後可能出現小範圍瘀青、紅點或局部痠脹，通常會隨時間逐漸淡化。若本身較容易瘀青、正在服用抗凝血相關藥物，或有特殊健康狀況，初診時建議主動告知醫師。"}},
 {"@type":"Question","name":"做一次就會有效果嗎？","acceptedAnswer":{"@type":"Answer","text":"有些人做完後會覺得臉部比較放鬆、氣色或緊繃感有所不同，但每個人的狀態、生活作息與在意的問題都不同，因此不能用固定次數判斷效果。醫師會依初診評估與後續反應，建議適合的療程頻率。"}},
 {"@type":"Question","name":"我不知道自己適合哪一種療程？","acceptedAnswer":{"@type":"Answer","text":"不用先替自己選療程。初診時只要告訴醫師你最在意的問題，例如氣色、輪廓、眉間緊繃、咬肌緊、頭臉壓力感或睡眠狀態，醫師會再依臉部張力、身體狀況與需求評估適合的方式。"}},
 {"@type":"Question","name":"做完可以上班或化妝嗎？","acceptedAnswer":{"@type":"Answer","text":"多數情況下可以正常安排日常行程，但仍要看施針部位與個人反應。若有局部紅點、瘀青或痠脹，建議先讓皮膚休息；是否適合立即上妝，醫師會依當天療程狀況提供注意事項。"}},
-{"@type":"Question","name":"美顏針灸適合哪些人？","acceptedAnswer":{"@type":"Answer","text":"如果你在意的是氣色疲憊、臉部緊繃、輪廓沒精神，或希望用較自然的方式調理臉部狀態，都可以先安排初診評估。是否適合施作，仍需由醫師依個人狀況判斷。"}},
-{"@type":"Question","name":"美顏針灸多久做一次？","acceptedAnswer":{"@type":"Answer","text":"沒有固定答案。療程頻率會依個人狀態、在意問題與每次治療後的反應調整，初診後醫師會提供較適合你的安排，而不是套用固定療程次數。"}}
+{"@type":"Question","name":"美顏針適合哪些人？","acceptedAnswer":{"@type":"Answer","text":"如果你在意的是氣色疲憊、臉部緊繃、輪廓沒精神，或希望用較自然的方式調理臉部狀態，都可以先安排初診評估。是否適合施作，仍需由醫師依個人狀況判斷。"}},
+{"@type":"Question","name":"美顏針多久做一次？","acceptedAnswer":{"@type":"Answer","text":"沒有固定答案。療程頻率會依個人狀態、在意問題與每次治療後的反應調整，初診後醫師會提供較適合你的安排，而不是套用固定療程次數。"}}
 ]}
 ]}
 </script>
@@ -134,7 +166,7 @@
     </sc-if>
   </header>
 
-  <section id="yc-hero" style="position:relative;overflow:hidden;background:#FAF6F0">
+  <section id="yc-hero" data-wave="" style="position:relative;overflow:hidden;background:#FAF6F0">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(20px,4vw,48px) clamp(56px,7vw,104px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,5vw,64px);align-items:center">
       <div data-anim="" style="animation:yc-rise .9s ease-out both">
         <p style="margin:0 0 26px;font-size:13px;letter-spacing:.3em;color:#B8912F">台中中醫美顏・身心調理</p>
@@ -142,13 +174,13 @@
         <div style="margin:30px 0 0;display:flex;flex-direction:column;gap:10px;font-size:clamp(15px,1.3vw,17px);line-height:2;color:#9E8547">
           <p style="margin:0">給在意氣色、輪廓與臉部緊繃，</p>
           <p style="margin:0">卻不想讓自己變得不像自己的你。</p>
-          <p style="margin:0">從美顏針灸開始，找回自然、放鬆的狀態。</p>
+          <p style="margin:0">從美顏針開始，找回自然、放鬆的狀態。</p>
         </div>
         <a style="margin-top:38px;display:inline-flex;align-items:center;gap:12px;padding:17px 38px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 <span style="font-family:'EB Garamond',serif">→</span></a>
       </div>
       <div style="position:relative">
         <div style="position:relative;overflow:hidden;border-radius:clamp(150px,24vw,280px) clamp(150px,24vw,280px) clamp(150px,24vw,280px) 32px;box-shadow:0 30px 70px -40px rgba(81,68,62,.45)">
-          <img src="assets/hero.webp" alt="予澄中醫診所 美顏針灸 形象" width="1670" height="911" style="width:100%;height:clamp(320px,46vw,520px);object-fit:cover;object-position:38% 32%" />
+          <img src="assets/hero.webp" alt="予澄中醫診所 美顏針 形象" width="1670" height="911" style="width:100%;height:clamp(320px,46vw,520px);object-fit:cover;object-position:38% 32%" />
           <span data-anim="" style="position:absolute;top:-40%;left:0;width:38%;height:180%;background:linear-gradient(100deg,rgba(253,251,248,0) 0%,rgba(255,252,247,.72) 45%,rgba(232,213,200,.35) 60%,rgba(253,251,248,0) 100%);filter:blur(6px);mix-blend-mode:screen;animation:yc-sheen 6.5s cubic-bezier(.4,0,.2,1) infinite;pointer-events:none"></span>
           <span data-anim="" style="position:absolute;inset:0;background:radial-gradient(38% 32% at 42% 30%,rgba(255,248,240,.55),rgba(255,248,240,0) 70%);animation:yc-bloom 7s ease-in-out infinite;pointer-events:none"></span>
           <span data-anim="" style="position:absolute;top:24%;left:44%;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95) 0%,rgba(255,250,242,.5) 40%,rgba(255,248,240,0) 100%);filter:blur(.6px);animation:yc-twinkle 4.2s ease-in-out .2s infinite;pointer-events:none"></span>
@@ -160,12 +192,6 @@
     </div>
   </section>
 
-  <div id="yc-arc" aria-hidden="true" style="position:relative;height:clamp(64px,9vw,132px);background:#EFE5DA;overflow:hidden">
-    <svg viewBox="0 0 1200 132" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;display:block">
-      <path d="M0 0H1200V44C900 104 300 104 0 44Z" fill="#FAF6F0" />
-    </svg>
-  </div>
-
   <a id="yc-line" aria-label="LINE 預約初診" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:60;display:flex;flex-direction:column;align-items:center;gap:10px;color:#51443E">
     <span style="padding:10px 18px;border-radius:999px;background:#FDFBF8;color:#806A60;font-size:16px;font-weight:600;letter-spacing:.08em;white-space:nowrap;box-shadow:0 10px 26px -14px rgba(81,68,62,.55)">預約初診</span>
     <span style="display:flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:30px;background:#06C755;box-shadow:0 14px 30px -12px rgba(6,101,44,.5)">
@@ -173,7 +199,7 @@
     </span>
   </a>
 
-  <section id="yc-concerns" style="background:#EFE5DA">
+  <section id="yc-concerns" data-wave="" style="background:#EFE5DA">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(20px,4vw,48px)">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,3vw,44px);margin-bottom:clamp(30px,4vw,52px)">
         <h2 style="margin:0;flex:1;min-width:260px;font-size:clamp(23px,2.9vw,36px);line-height:1.6;font-weight:600;color:#8A6A28;letter-spacing:.04em">最近的你，是哪一種「看起來很累」？</h2>
@@ -200,7 +226,7 @@
           <div style="display:flex;flex-direction:column;gap:10px">
             <h3 style="margin:0;font-size:clamp(20px,2.1vw,25px);font-weight:700;color:#8A6A28;letter-spacing:.1em">氣色沒精神</h3>
             <p data-step-copy="" style="margin:0;flex:1;min-width:220px;font-size:clamp(16px,1.5vw,18px);line-height:1.95;color:#9E8547">明明有休息，照鏡子還是覺得疲憊。</p>
-            <a href="#yc-services" style="font-size:14.5px;letter-spacing:.06em;color:#AD8A33;white-space:nowrap">看看美顏針灸 →</a>
+            <a href="#yc-services" style="font-size:14.5px;letter-spacing:.06em;color:#AD8A33;white-space:nowrap">看看美顏針 →</a>
           </div>
         </article>
         <article style="display:flex;align-items:flex-start;gap:clamp(16px,2vw,26px);padding:clamp(26px,3vw,40px) clamp(8px,2vw,28px);border-bottom:1.5px dashed #B9A882">
@@ -231,68 +257,45 @@
     </div>
   </section>
 
-  <section id="yc-services" style="background:#FAF6F0">
-    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px)">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:clamp(34px,4.5vw,60px);text-align:center">
-        <h2 style="margin:0;font-size:clamp(26px,3.4vw,42px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">從你在意的問題，找到適合的調理方式。</h2>
+  <section id="yc-what" data-wave="" style="background:#FAF6F0">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(20px,4vw,48px)">
+      <h2 style="margin:0;font-size:clamp(24px,3.1vw,38px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">什麼是美顏針？</h2>
+      <div style="margin-top:clamp(28px,3.4vw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,3.6vw,58px);align-items:center">
+        <div style="overflow:hidden;border-radius:56% 44% 42% 58% / 48% 40% 60% 52%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
+          <img src="assets/facial-needle-intro.png" alt="美顏針施針示意" width="1536" height="1024" style="width:100%;height:clamp(250px,28vw,360px);object-fit:cover" />
+        </div>
+        <p style="margin:0;font-size:clamp(16px,1.5vw,17px);line-height:2.05;color:#9E8547">以細如髮絲的針進行臉部針灸，療程後通常可正常生活與上妝，適合想自然變好看、又不想經歷漫長恢復期的你。</p>
       </div>
-
-      <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,34px)">
-
-        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
-          <div data-svc-txt="" data-from="right" style="display:flex;flex-direction:column;gap:18px">
-            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#A9822F;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(1% 5%,99% 0,100% 94%,0 100%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">美顏針灸</p>
-            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">依你的臉，決定下針的位置</h3>
-            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">依臉部肌肉、筋膜與個人狀態評估施針，針對氣色、輪廓與表情緊繃進行調理。</p>
-          </div>
-          <div data-svc-img="" data-from="left" style="overflow:hidden;border-radius:58% 42% 38% 62% / 52% 38% 62% 48%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
-            <img src="assets/facial-acupuncture.webp" alt="美顏針灸療程" width="416" height="416" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
-          </div>
-        </article>
-
-        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
-          <div data-svc-img="" data-from="right" style="overflow:hidden;border-radius:42% 58% 60% 40% / 40% 56% 44% 60%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7);order:0">
-            <img src="assets/facial-fascia.webp" alt="顏面筋膜調理" width="1536" height="1024" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
-          </div>
-          <div data-svc-txt="" data-from="left" style="display:flex;flex-direction:column;gap:18px">
-            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#B9A882;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(0 0,99% 5%,100% 100%,1% 95%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">顏面筋膜調理</p>
-            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">從累積張力的地方開始鬆開</h3>
-            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">從眉間、下顎、咀嚼肌等容易累積張力的位置著手，讓長期緊繃的表情慢慢舒展。</p>
-          </div>
-        </article>
-
-        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
-          <div data-svc-txt="" data-from="right" style="display:flex;flex-direction:column;gap:18px">
-            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#A9822F;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(1% 4%,100% 0,99% 95%,0 100%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">頭顏調理</p>
-            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">用腦過度，頭和臉一起放鬆</h3>
-            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">從頭皮到頭顏的緊繃狀態進行評估，適合長時間用腦、容易感到頭臉緊繃的你。</p>
-          </div>
-          <div data-svc-img="" data-from="left" style="overflow:hidden;border-radius:60% 40% 52% 48% / 46% 60% 40% 54%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
-            <img src="assets/cranial-care.webp" alt="頭顏調理" width="430" height="284" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
-          </div>
-        </article>
-
-        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
-          <div data-svc-img="" data-from="right" style="overflow:hidden;border-radius:45% 55% 40% 60% / 58% 42% 58% 42%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
-            <img src="assets/herbal-care.webp" alt="睡眠與壓力調理" width="385" height="416" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
-          </div>
-          <div data-svc-txt="" data-from="left" style="display:flex;flex-direction:column;gap:18px">
-            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#B9A882;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(0 5%,99% 0,100% 96%,1% 100%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">睡眠・壓力調理</p>
-            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">疲憊不只在臉上，也看身體</h3>
-            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">如果疲憊不只出現在臉上，也可以從睡眠、壓力與整體身體狀態進一步評估。</p>
-          </div>
-        </article>
+      <h3 style="margin:clamp(40px,5vw,66px) 0 0;font-size:clamp(19px,2vw,24px);font-weight:600;line-height:1.6;color:#8A6A28;letter-spacing:.06em">美顏針，想改善的不只是「一張累臉」</h3>
+      <div data-what-grid="" style="margin-top:clamp(24px,2.8vw,38px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,1.6vw,22px)">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;aspect-ratio:1;padding:clamp(20px,2.4vw,32px);text-align:center;background:#F4EAE0;border-radius:58% 42% 45% 55% / 52% 48% 52% 48%">
+          <h4 style="margin:0;font-size:clamp(15.5px,1.5vw,18px);font-weight:700;line-height:1.68;color:#8A6A28;letter-spacing:.05em">氣色暗沉、看起來總是很累</h4>
+          <p style="margin:0;font-size:clamp(14px,1.25vw,15px);line-height:1.88;color:#9E8547">從臉部針灸著手，調理氣血與疲憊狀態。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;aspect-ratio:1;padding:clamp(20px,2.4vw,32px);text-align:center;background:#EFE5DA;border-radius:44% 56% 58% 42% / 46% 56% 44% 54%">
+          <h4 style="margin:0;font-size:clamp(15.5px,1.5vw,18px);font-weight:700;line-height:1.68;color:#8A6A28;letter-spacing:.05em">臉容易腫、輪廓看起來沒精神</h4>
+          <p style="margin:0;font-size:clamp(14px,1.25vw,15px);line-height:1.88;color:#9E8547">依臉部肌肉與張力，評估適合的施針方式。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;aspect-ratio:1;padding:clamp(20px,2.4vw,32px);text-align:center;background:#EFE5DA;border-radius:52% 48% 40% 60% / 58% 42% 58% 42%">
+          <h4 style="margin:0;font-size:clamp(15.5px,1.5vw,18px);font-weight:700;line-height:1.68;color:#8A6A28;letter-spacing:.05em">眉頭緊、咬肌緊，表情總是放不開</h4>
+          <p style="margin:0;font-size:clamp(14px,1.25vw,15px);line-height:1.88;color:#9E8547">針對容易緊繃的位置進行調理，讓臉慢慢放鬆。</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;aspect-ratio:1;padding:clamp(20px,2.4vw,32px);text-align:center;background:#F4EAE0;border-radius:46% 54% 55% 45% / 42% 58% 42% 58%">
+          <h4 style="margin:0;font-size:clamp(15.5px,1.5vw,18px);font-weight:700;line-height:1.68;color:#8A6A28;letter-spacing:.05em">睡不好、壓力大，疲態一直回來</h4>
+          <p style="margin:0;font-size:clamp(14px,1.25vw,15px);line-height:1.88;color:#9E8547">必要時搭配身體穴位，從整體狀態一起調理。</p>
+        </div>
       </div>
+      <p style="margin:clamp(26px,3vw,38px) 0 0;font-size:13.5px;line-height:1.9;color:#B9A882">實際施針方式與療程反應因人而異，由中醫師診察後決定。</p>
     </div>
   </section>
 
-  <section id="yc-areas" style="background:#FDFBF8">
+  <section id="yc-areas" data-wave="" style="background:#FDFBF8">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(20px,4vw,48px)">
-      <h2 style="margin:0;font-size:clamp(24px,3.1vw,38px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">美顏針灸，會依你的臉來決定怎麼施針。</h2>
+      <h2 style="margin:0;font-size:clamp(24px,3.1vw,38px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">美顏針，會依你的臉來決定怎麼施針。</h2>
       <p style="margin:20px 0 0;font-size:16px;line-height:2.05;color:#9E8547">每個人的表情習慣、肌肉張力與在意的位置都不同。醫師會先觀察臉部狀態，再依個人情況安排施針部位與方式。</p>
       <div style="margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(30px,4vw,64px);align-items:center">
         <div style="overflow:hidden;border-radius:34px">
-          <img src="assets/facial-areas.webp" alt="美顏針灸常見評估區域示意" width="1536" height="1024" style="width:100%;height:auto;object-fit:cover" />
+          <img src="assets/facial-areas.webp" alt="美顏針常見評估區域示意" width="1536" height="1024" style="width:100%;height:auto;object-fit:cover" />
         </div>
         <div>
           <p style="margin:0 0 clamp(18px,2vw,26px);font-size:15px;letter-spacing:.16em;color:#AD8A33">常見評估區域</p>
@@ -324,9 +327,55 @@
     </div>
   </section>
 
-  <section id="yc-process" style="background:#FAF6F0">
+  <section id="yc-services" style="background:#FAF6F0">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px)">
-      <h2 style="margin:0 0 clamp(34px,4.5vw,60px);font-size:clamp(26px,3.4vw,42px);line-height:1.5;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏之前，先了解你的臉。</h2>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:clamp(34px,4.5vw,60px);text-align:center">
+        <h2 style="margin:0;font-size:clamp(26px,3.4vw,42px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">美顏針外的延伸調理</h2>
+        <p style="margin:0;font-size:clamp(15.5px,1.5vw,17px);line-height:2.05;color:#9E8547">配合需求，可為您再搭配以下的調理選項。</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,34px)">
+
+
+        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
+          <div data-svc-img="" data-from="right" style="overflow:hidden;border-radius:42% 58% 60% 40% / 40% 56% 44% 60%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7);order:0">
+            <img src="assets/facial-fascia.webp" alt="顏面筋膜調理" width="1536" height="1024" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
+          </div>
+          <div data-svc-txt="" data-from="left" style="display:flex;flex-direction:column;gap:18px">
+            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#B9A882;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(0 0,99% 5%,100% 100%,1% 95%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">顏面筋膜調理</p>
+            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">放鬆容易緊繃的表情肌</h3>
+            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">針對眉間、咀嚼肌、下顎等張力較明顯的位置進一步調理。</p>
+          </div>
+        </article>
+
+        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
+          <div data-svc-txt="" data-from="right" style="display:flex;flex-direction:column;gap:18px">
+            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#A9822F;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(1% 4%,100% 0,99% 95%,0 100%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">耳穴調理</p>
+            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">小小耳穴貼，延續日常裡的身體調理</h3>
+            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">透過耳穴貼壓刺激特定穴位，日常生活中也能持續進行。</p>
+          </div>
+          <div data-svc-img="" data-from="left" style="overflow:hidden;border-radius:60% 40% 52% 48% / 46% 60% 40% 54%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
+            <img src="assets/ear-seeds.png" alt="耳穴調理" width="1536" height="1024" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
+          </div>
+        </article>
+
+        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,3.4vw,56px);align-items:center">
+          <div data-svc-img="" data-from="right" style="overflow:hidden;border-radius:45% 55% 40% 60% / 58% 42% 58% 42%;box-shadow:0 26px 60px -46px rgba(81,68,62,.7)">
+            <img src="assets/herbal-care.webp" alt="睡眠與壓力調理" width="385" height="416" style="width:100%;height:clamp(240px,26vw,330px);object-fit:cover" />
+          </div>
+          <div data-svc-txt="" data-from="left" style="display:flex;flex-direction:column;gap:18px">
+            <p style="margin:0;align-self:flex-start;padding:14px 34px;background:#B9A882;color:#FDFBF8;font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:.08em;clip-path:polygon(0 5%,99% 0,100% 96%,1% 100%);box-shadow:0 12px 28px -22px rgba(81,68,62,.9)">睡眠・壓力調理</p>
+            <h3 style="margin:0;font-size:clamp(17px,1.8vw,20px);font-weight:700;color:#8A6A28;letter-spacing:.06em">疲憊不只在臉上，就從身體一起調</h3>
+            <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">若伴隨睡不好、壓力大或長期疲倦，可由中醫師進一步評估整體狀態。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="yc-process" data-wave="" style="background:#FAF6F0">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px)">
+      <h2 style="margin:0 0 clamp(34px,4.5vw,60px);font-size:clamp(26px,3.4vw,42px);line-height:1.5;font-weight:500;color:#8A6A28;letter-spacing:.04em">療程進行方式</h2>
       <div style="display:flex;flex-direction:column;gap:clamp(18px,2.2vw,28px);max-width:900px">
         <article style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,2.6vw,40px)">
           <div data-step-circle="" style="flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:clamp(230px,26vw,320px);height:clamp(230px,26vw,320px);background:#E8D5C8;border-radius:56% 44% 48% 52% / 46% 52% 48% 54%">
@@ -360,13 +409,12 @@
       <a style="margin-top:clamp(32px,4vw,48px);display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 →</a>
     </div>
   </section>
-  <section id="yc-general" style="background:#E8D5C8">
+  <section id="yc-general" data-wave="" style="background:#E8D5C8">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(20px,4vw,48px)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(30px,4vw,64px);align-items:center">
         <div>
           <h2 style="margin:0 0 20px;font-size:clamp(26px,3.2vw,38px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">一般中醫門診</h2>
           <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">除了美顏療程，日常的睡眠、腸胃、經期與痠痛，同樣由醫師依體質評估，安排合適的中醫治療。</p>
-          <a style="margin-top:30px;display:inline-block;padding:15px 34px;border:1px solid #AD8A33;border-radius:999px;font-size:15px;letter-spacing:.1em;color:#AD8A33;white-space:nowrap" style-hover="background:#AD8A33;color:#FDFBF8">查看一般門診 →</a>
         </div>
         <div style="overflow:hidden;border-radius:28px">
           <img src="assets/herbal-care.webp" alt="一般中醫門診" width="385" height="416" style="width:100%;height:clamp(220px,24vw,300px);object-fit:cover" />
@@ -393,7 +441,7 @@
     </div>
   </section>
 
-  <section id="yc-doctor" style="background:#EFE5DA">
+  <section id="yc-doctor" data-wave="" style="background:#EFE5DA">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(32px,5vw,72px);align-items:center">
       <div style="overflow:hidden;border-radius:54% 46% 48% 52% / 46% 44% 56% 54%;max-width:420px;box-shadow:0 30px 70px -50px rgba(81,68,62,.6)">
         <img src="assets/doctor-lin-yucheng.webp" alt="林予澄 中醫師" width="1145" height="1374" style="width:100%;height:clamp(340px,38vw,480px);object-fit:cover;object-position:50% 20%" />
@@ -406,7 +454,7 @@
     </div>
   </section>
 
-  <section id="yc-space" style="background:#FAF6F0">
+  <section id="yc-space" data-wave="" style="background:#FAF6F0">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:end;margin-bottom:clamp(30px,3.6vw,48px)">
         <h2 style="margin:0;font-size:clamp(24px,3.2vw,40px);line-height:1.5;font-weight:500;color:#8A6A28;letter-spacing:.04em">一個讓你慢慢放鬆下來的看診空間。</h2>
@@ -424,11 +472,11 @@
     </div>
   </section>
 
-  <section id="yc-faq" style="background:#FDFBF8">
+  <section id="yc-faq" data-wave="" style="background:#FDFBF8">
     <div style="max-width:940px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px)">
       <h2 style="margin:0 0 clamp(28px,3.4vw,44px);font-size:clamp(23px,2.7vw,34px);font-weight:500;color:#8A6A28;letter-spacing:.06em">常見問題</h2>
       <details style="border-bottom:1px solid #EFE5DA">
-        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針灸會痛嗎？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針會痛嗎？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
         <p style="margin:0;padding:0 4px 26px;font-size:15.5px;line-height:2;color:#9E8547">多數人在施針時會感受到輕微刺感、痠感或局部脹感，通常是短暫的。臉部不同位置的敏感度不一樣，每個人的感受也會不同；療程中若有明顯不適，可以隨時告知醫師調整。</p>
       </details>
       <details style="border-bottom:1px solid #EFE5DA">
@@ -448,11 +496,11 @@
         <p style="margin:0;padding:0 4px 26px;font-size:15.5px;line-height:2;color:#9E8547">多數情況下可以正常安排日常行程，但仍要看施針部位與個人反應。若有局部紅點、瘀青或痠脹，建議先讓皮膚休息；是否適合立即上妝，醫師會依當天療程狀況提供注意事項。</p>
       </details>
       <details style="border-bottom:1px solid #EFE5DA">
-        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針灸適合哪些人？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針適合哪些人？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
         <p style="margin:0;padding:0 4px 26px;font-size:15.5px;line-height:2;color:#9E8547">如果你在意的是氣色疲憊、臉部緊繃、輪廓沒精神，或希望用較自然的方式調理臉部狀態，都可以先安排初診評估。是否適合施作，仍需由醫師依個人狀況判斷。</p>
       </details>
       <details style="border-bottom:1px solid #EFE5DA">
-        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針灸多久做一次？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;font-size:17px;font-weight:500;color:#8A6A28;letter-spacing:.04em">美顏針多久做一次？ <span style="color:#B8912F;font-family:'EB Garamond',serif">＋</span></summary>
         <p style="margin:0;padding:0 4px 26px;font-size:15.5px;line-height:2;color:#9E8547">沒有固定答案。療程頻率會依個人狀態、在意問題與每次治療後的反應調整，初診後醫師會提供較適合你的安排，而不是套用固定療程次數。</p>
       </details>
     </div>
@@ -474,7 +522,7 @@
     </div>
   </section>
 
-  <section id="yc-booking" style="position:relative;overflow:hidden;background:#806A60">
+  <section id="yc-booking" data-wave="" style="position:relative;overflow:hidden;background:#806A60">
     <img src="assets/clinic-reception.webp" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4" />
     <span aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,61,55,.72),rgba(74,61,55,.82))"></span>
     <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(60px,9vw,130px) clamp(20px,4vw,48px);text-align:center">
