@@ -117,7 +117,7 @@
         <a href="#yc-doctor" style="font-size:15px;letter-spacing:.1em;color:#8A6A28;white-space:nowrap">醫師介紹</a>
         <a href="#yc-faq" style="font-size:15px;letter-spacing:.1em;color:#8A6A28;white-space:nowrap">FAQ</a>
         <a href="#yc-visit" style="font-size:15px;letter-spacing:.1em;color:#8A6A28;white-space:nowrap">交通資訊</a>
-        <a href="#yc-booking" style="padding:11px 24px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:15px;letter-spacing:.1em;white-space:nowrap" style-hover="background:#51443E">預約初診</a>
+        <a style="padding:11px 24px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:15px;letter-spacing:.1em;white-space:nowrap" style-hover="background:#51443E">預約初診</a>
       </nav>
       <button type="button" data-mobile-only="" onClick="{{ toggleMenu }}" aria-label="選單" style="display:none;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #E8D5C8;border-radius:999px;background:#FDFBF8;color:#8A6A28;font-size:17px;cursor:pointer">
         {{ menuIcon }}
@@ -129,7 +129,7 @@
         <a href="#yc-doctor" onClick="{{ closeMenu }}" style="padding:14px 4px;font-size:16px;color:#8A6A28;border-bottom:1px solid #EFE5DA">醫師介紹</a>
         <a href="#yc-faq" onClick="{{ closeMenu }}" style="padding:14px 4px;font-size:16px;color:#8A6A28;border-bottom:1px solid #EFE5DA">FAQ</a>
         <a href="#yc-visit" onClick="{{ closeMenu }}" style="padding:14px 4px;font-size:16px;color:#8A6A28;border-bottom:1px solid #EFE5DA">交通資訊</a>
-        <a href="#yc-booking" onClick="{{ closeMenu }}" style="margin-top:14px;padding:14px;border-radius:999px;background:#806A60;color:#FDFBF8;text-align:center;font-size:16px;letter-spacing:.1em">預約初診</a>
+        <a onClick="{{ closeMenu }}" style="margin-top:14px;padding:14px;border-radius:999px;background:#806A60;color:#FDFBF8;text-align:center;font-size:16px;letter-spacing:.1em">預約初診</a>
       </nav>
     </sc-if>
   </header>
@@ -144,7 +144,7 @@
           <p style="margin:0">卻不想讓自己變得不像自己的你。</p>
           <p style="margin:0">從美顏針灸開始，找回自然、放鬆的狀態。</p>
         </div>
-        <a href="#yc-booking" style="margin-top:38px;display:inline-flex;align-items:center;gap:12px;padding:17px 38px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 <span style="font-family:'EB Garamond',serif">→</span></a>
+        <a style="margin-top:38px;display:inline-flex;align-items:center;gap:12px;padding:17px 38px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 <span style="font-family:'EB Garamond',serif">→</span></a>
       </div>
       <div style="position:relative">
         <div style="position:relative;overflow:hidden;border-radius:clamp(150px,24vw,280px) clamp(150px,24vw,280px) clamp(150px,24vw,280px) 32px;box-shadow:0 30px 70px -40px rgba(81,68,62,.45)">
@@ -166,7 +166,7 @@
     </svg>
   </div>
 
-  <a id="yc-line" href="#yc-booking" aria-label="LINE 預約初診" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:60;display:flex;flex-direction:column;align-items:center;gap:10px;color:#51443E">
+  <a id="yc-line" aria-label="LINE 預約初診" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:60;display:flex;flex-direction:column;align-items:center;gap:10px;color:#51443E">
     <span style="padding:10px 18px;border-radius:999px;background:#FDFBF8;color:#806A60;font-size:16px;font-weight:600;letter-spacing:.08em;white-space:nowrap;box-shadow:0 10px 26px -14px rgba(81,68,62,.55)">預約初診</span>
     <span style="display:flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:30px;background:#06C755;box-shadow:0 14px 30px -12px rgba(6,101,44,.5)">
       <svg width="84" height="84" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 4.2c-4.5 0-8.2 3-8.2 6.6 0 3.3 2.9 6.1 6.8 6.6.3 0 .5.3.5.6l-.2 1.5c0 .3.2.5.5.4 2-1 5.3-3.2 6.9-5.1 1.3-1.4 1.9-2.8 1.9-4C20.2 7.2 16.5 4.2 12 4.2ZM9 13.4H7.1c-.3 0-.6-.3-.6-.6V9.2c0-.3.3-.6.6-.6s.6.3.6.6v3h1.3c.3 0 .6.3.6.6s-.3.6-.6.6Zm2.1-.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6V9.2c0-.3.3-.6.6-.6s.6.3.6.6v3.6Zm4.4 0c0 .3-.2.5-.4.6h-.2c-.2 0-.4-.1-.5-.2l-1.8-2.4v2c0 .3-.3.6-.6.6s-.6-.3-.6-.6V9.2c0-.3.2-.5.4-.6.2-.1.5 0 .6.2l1.9 2.5V9.2c0-.3.3-.6.6-.6s.6.3.6.6v3.6Zm3.1-2.4c.3 0 .6.3.6.6s-.3.6-.6.6h-1.3v.9h1.3c.3 0 .6.3.6.6s-.3.6-.6.6h-1.9c-.3 0-.6-.3-.6-.6V9.2c0-.3.3-.6.6-.6h1.9c.3 0 .6.3.6.6s-.3.6-.6.6h-1.3v.9h1.3Z" /></svg>
@@ -357,7 +357,7 @@
           <p data-step-copy="" style="margin:0;flex:1;min-width:220px;font-size:clamp(16px,1.5vw,18px);line-height:1.95;color:#9E8547">依實際反應與需求，討論是否需要後續調理。</p>
         </article>
       </div>
-      <a href="#yc-booking" style="margin-top:clamp(32px,4vw,48px);display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 →</a>
+      <a style="margin-top:clamp(32px,4vw,48px);display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:999px;background:#806A60;color:#FDFBF8;font-size:16px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#51443E">預約美顏初診 →</a>
     </div>
   </section>
   <section id="yc-general" style="background:#E8D5C8">
@@ -366,7 +366,7 @@
         <div>
           <h2 style="margin:0 0 20px;font-size:clamp(26px,3.2vw,38px);line-height:1.5;font-weight:600;color:#8A6A28;letter-spacing:.04em">一般中醫門診</h2>
           <p style="margin:0;font-size:16px;line-height:2.05;color:#9E8547">除了美顏療程，日常的睡眠、腸胃、經期與痠痛，同樣由醫師依體質評估，安排合適的中醫治療。</p>
-          <a href="#yc-general" style="margin-top:30px;display:inline-block;padding:15px 34px;border:1px solid #AD8A33;border-radius:999px;font-size:15px;letter-spacing:.1em;color:#AD8A33;white-space:nowrap" style-hover="background:#AD8A33;color:#FDFBF8">查看一般門診 →</a>
+          <a style="margin-top:30px;display:inline-block;padding:15px 34px;border:1px solid #AD8A33;border-radius:999px;font-size:15px;letter-spacing:.1em;color:#AD8A33;white-space:nowrap" style-hover="background:#AD8A33;color:#FDFBF8">查看一般門診 →</a>
         </div>
         <div style="overflow:hidden;border-radius:28px">
           <img src="assets/herbal-care.webp" alt="一般中醫門診" width="385" height="416" style="width:100%;height:clamp(220px,24vw,300px);object-fit:cover" />
@@ -480,7 +480,7 @@
     <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(60px,9vw,130px) clamp(20px,4vw,48px);text-align:center">
       <h2 style="margin:0 0 26px;font-size:clamp(25px,3.2vw,40px);line-height:1.5;font-weight:500;color:#FDFBF8;letter-spacing:.05em">不需要先決定要做什麼。</h2>
       <p style="margin:0;font-size:16.5px;line-height:2.15;color:#EFE5DA">告訴醫師你最近在意的改變，從一次評估開始，找到適合你的方式。</p>
-      <a href="tel:+886423262188" style="margin-top:38px;display:inline-flex;align-items:center;gap:12px;padding:18px 44px;border-radius:999px;background:#FDFBF8;color:#8A6A28;font-size:16.5px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#E8D5C8">預約美顏初診 →</a>
+      <a style="margin-top:38px;display:inline-flex;align-items:center;gap:12px;padding:18px 44px;border-radius:999px;background:#FDFBF8;color:#8A6A28;font-size:16.5px;letter-spacing:.12em;white-space:nowrap" style-hover="background:#E8D5C8">預約美顏初診 →</a>
     </div>
   </section>
 
@@ -496,7 +496,7 @@
         <p style="margin:0"><strong style="color:#FAF6F0;font-weight:500">Email｜</strong><a href="mailto:hello@yucheng-tcm.com" style="color:#E8D5C8">hello@yucheng-tcm.com</a></p>
       </div>
       <nav style="display:flex;flex-wrap:wrap;gap:10px 18px;align-content:start;font-size:15px;white-space:nowrap">
-        <a href="#yc-booking" style="color:#E8D5C8">LINE 預約</a>
+        <a style="color:#E8D5C8">LINE 預約</a>
         <span style="color:#AD8A33">｜</span>
         <a href="tel:+886423262188" style="color:#E8D5C8">電話預約</a>
         <span style="color:#AD8A33">｜</span>
