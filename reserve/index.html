@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>線上預約 | 予澄中醫診所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF6F0;
+    --card:#FFFFFF;
+    --ink:#51443E;
+    --gold:#8A6A28;
+    --gold-soft:#AD8A33;
+    --mauve:#806A60;
+    --mauve-dark:#6E5A51;
+    --line:#E7DFD3;
+    --slot-bg:#F5EFE6;
+    --slot-disabled:#EDE7DE;
+    --danger:#B5573F;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Noto Sans TC","Noto Serif TC",serif;
+    padding:48px 20px 80px;
+  }
+  .wrap{
+    max-width:560px;
+    margin:0 auto;
+  }
+  .title{
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .title h1{
+    font-family:"Noto Serif TC",serif;
+    font-weight:500;
+    color:var(--gold);
+    font-size:28px;
+    margin:0 0 6px;
+    letter-spacing:1px;
+  }
+  .title p{
+    margin:0;
+    font-size:14px;
+    color:var(--gold-soft);
+    letter-spacing:2px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:32px 28px;
+    margin-top:28px;
+    box-shadow:0 10px 30px rgba(138,106,40,0.06);
+  }
+  .field{
+    margin-bottom:20px;
+  }
+  .field label{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .field label .req{
+    color:var(--danger);
+    margin-left:2px;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  select{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-size:15px;
+    font-family:inherit;
+    color:var(--ink);
+    background:#FDFCFA;
+    outline:none;
+    transition:border-color .15s;
+  }
+  input:focus, select:focus{
+    border-color:var(--mauve);
+  }
+  .slots{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:4px;
+  }
+  .slot-group{
+    margin-bottom:14px;
+  }
+  .slot-group h4{
+    margin:0 0 8px;
+    font-size:13px;
+    color:var(--gold-soft);
+    font-weight:600;
+  }
+  .slot-btn{
+    padding:10px 6px;
+    border-radius:8px;
+    border:1px solid var(--line);
+    background:var(--slot-bg);
+    color:var(--ink);
+    font-size:14px;
+    cursor:pointer;
+    text-align:center;
+    transition:all .15s;
+  }
+  .slot-btn:hover:not(:disabled){
+    border-color:var(--mauve);
+  }
+  .slot-btn.selected{
+    background:var(--mauve);
+    border-color:var(--mauve);
+    color:#FDFBF8;
+  }
+  .slot-btn:disabled{
+    background:var(--slot-disabled);
+    color:#B9B0A4;
+    cursor:not-allowed;
+    text-decoration:line-through;
+  }
+  .empty-note{
+    font-size:14px;
+    color:#9A9086;
+    padding:14px 0;
+    text-align:center;
+  }
+  .submit-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:999px;
+    background:var(--mauve);
+    color:#FDFBF8;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:8px;
+    transition:background .15s;
+    font-family:inherit;
+  }
+  .submit-btn:hover{
+    background:var(--mauve-dark);
+  }
+  .submit-btn:disabled{
+    background:#CFC6BA;
+    cursor:not-allowed;
+  }
+  .msg{
+    font-size:13px;
+    color:var(--danger);
+    margin-top:6px;
+    min-height:16px;
+  }
+  .confirm{
+    text-align:center;
+  }
+  .confirm .icon{
+    width:56px;height:56px;
+    border-radius:50%;
+    background:var(--mauve);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:28px;
+    margin:0 auto 16px;
+  }
+  .confirm h2{
+    font-family:"Noto Serif TC",serif;
+    color:var(--gold);
+    font-weight:500;
+    margin:0 0 18px;
+  }
+  .confirm-info{
+    text-align:left;
+    background:var(--slot-bg);
+    border-radius:12px;
+    padding:18px 20px;
+    font-size:15px;
+    line-height:2;
+  }
+  .confirm-info b{color:var(--ink);}
+  .confirm .again{
+    margin-top:20px;
+    background:none;
+    border:1px solid var(--line);
+    color:var(--mauve-dark);
+    padding:10px 20px;
+    border-radius:999px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:14px;
+  }
+  [hidden]{display:none!important;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="title">
+    <h1>線上預約</h1>
+    <p>予澄中醫診所</p>
+  </div>
+
+  <div class="card" id="bookingCard">
+    <form id="bookingForm" novalidate>
+      <div class="field">
+        <label for="name">姓名<span class="req">*</span></label>
+        <input type="text" id="name" placeholder="請輸入姓名" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">聯絡電話<span class="req">*</span></label>
+        <input type="tel" id="phone" placeholder="請輸入手機號碼" required>
+      </div>
+
+      <div class="field">
+        <label for="service">看診項目</label>
+        <select id="service">
+          <option value="初診">初診</option>
+          <option value="複診">複診</option>
+          <option value="美顏針">美顏針</option>
+          <option value="顏面筋膜調理">顏面筋膜調理</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="date">預約日期<span class="req">*</span></label>
+        <input type="date" id="date" required>
+        <div class="msg" id="dateMsg"></div>
+      </div>
+
+      <div class="field">
+        <label>預約時段<span class="req">*</span></label>
+        <div id="slotsArea"></div>
+        <div class="msg" id="slotMsg"></div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">送出預約</button>
+    </form>
+  </div>
+
+  <div class="card confirm" id="confirmCard" hidden>
+    <div class="icon">✓</div>
+    <h2>預約完成</h2>
+    <div class="confirm-info">
+      <div>姓名：<b id="cfName"></b></div>
+      <div>電話：<b id="cfPhone"></b></div>
+      <div>項目：<b id="cfService"></b></div>
+      <div>時間：<b id="cfTime"></b></div>
+    </div>
+    <button class="again" id="againBtn">再預約一筆</button>
+  </div>
+</div>
+
+<script>
+// ---- 診所營業時段設定（可依實際狀況調整）----
+const BUSINESS_HOURS = {
+  // 0=週日 ... 6=週六
+  0: null, // 週日休診
+  1: [["09:30","12:30"],["14:30","17:30"],["18:30","21:00"]],
+  2: [["09:30","12:30"],["14:30","17:30"],["18:30","21:00"]],
+  3: [["09:30","12:30"],["14:30","17:30"],["18:30","21:00"]],
+  4: [["09:30","12:30"],["14:30","17:30"],["18:30","21:00"]],
+  5: [["09:30","12:30"],["14:30","17:30"],["18:30","21:00"]],
+  6: [["09:30","12:30"],["14:30","17:30"]],
+};
+const SLOT_MINUTES = 15;
+const MAX_DAYS_AHEAD = 30;
+const STORAGE_KEY = "yucheng_appointments";
+
+const dateInput = document.getElementById("date");
+const slotsArea = document.getElementById("slotsArea");
+const dateMsg = document.getElementById("dateMsg");
+const slotMsg = document.getElementById("slotMsg");
+const form = document.getElementById("bookingForm");
+const bookingCard = document.getElementById("bookingCard");
+const confirmCard = document.getElementById("confirmCard");
+
+let selectedTime = null;
+
+function pad(n){ return n.toString().padStart(2,"0"); }
+function toISODate(d){ return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; }
+
+function setupDateRange(){
+  const today = new Date();
+  const max = new Date();
+  max.setDate(today.getDate() + MAX_DAYS_AHEAD);
+  dateInput.min = toISODate(today);
+  dateInput.max = toISODate(max);
+  dateInput.value = toISODate(today);
+}
+
+function getBookedSet(dateStr){
+  const all = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+  return new Set(all[dateStr] || []);
+}
+
+function saveBooking(dateStr, time){
+  const all = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+  if(!all[dateStr]) all[dateStr] = [];
+  all[dateStr].push(time);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+}
+
+function timeToMinutes(t){
+  const [h,m] = t.split(":").map(Number);
+  return h*60+m;
+}
+function minutesToTime(m){
+  return `${pad(Math.floor(m/60))}:${pad(m%60)}`;
+}
+
+function renderSlots(){
+  selectedTime = null;
+  slotMsg.textContent = "";
+  slotsArea.innerHTML = "";
+
+  const dateStr = dateInput.value;
+  if(!dateStr){ return; }
+
+  const d = new Date(dateStr + "T00:00:00");
+  const periods = BUSINESS_HOURS[d.getDay()];
+
+  if(!periods){
+    slotsArea.innerHTML = `<div class="empty-note">本日休診，請選擇其他日期</div>`;
+    return;
+  }
+
+  const now = new Date();
+  const isToday = toISODate(now) === dateStr;
+  const nowMinutes = now.getHours()*60 + now.getMinutes();
+  const booked = getBookedSet(dateStr);
+
+  periods.forEach(([start,end], idx) => {
+    const group = document.createElement("div");
+    group.className = "slot-group";
+    group.innerHTML = `<h4>${start} - ${end}</h4>`;
+    const grid = document.createElement("div");
+    grid.className = "slots";
+
+    let m = timeToMinutes(start);
+    const endM = timeToMinutes(end);
+    while(m < endM){
+      const t = minutesToTime(m);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "slot-btn";
+      btn.textContent = t;
+
+      const isPast = isToday && m <= nowMinutes;
+      const isBooked = booked.has(t);
+      if(isPast || isBooked){
+        btn.disabled = true;
+      } else {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".slot-btn.selected").forEach(b=>b.classList.remove("selected"));
+          btn.classList.add("selected");
+          selectedTime = t;
+          slotMsg.textContent = "";
+        });
+      }
+      grid.appendChild(btn);
+      m += SLOT_MINUTES;
+    }
+    group.appendChild(grid);
+    slotsArea.appendChild(group);
+  });
+}
+
+dateInput.addEventListener("change", renderSlots);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const dateStr = dateInput.value;
+
+  if(!name || !phone){
+    slotMsg.textContent = "";
+    dateMsg.textContent = "";
+    if(!name) document.getElementById("name").focus();
+    else document.getElementById("phone").focus();
+    return;
+  }
+  if(!dateStr){
+    dateMsg.textContent = "請選擇預約日期";
+    return;
+  }
+  dateMsg.textContent = "";
+  if(!selectedTime){
+    slotMsg.textContent = "請選擇預約時段";
+    return;
+  }
+
+  saveBooking(dateStr, selectedTime);
+
+  document.getElementById("cfName").textContent = name;
+  document.getElementById("cfPhone").textContent = phone;
+  document.getElementById("cfService").textContent = service;
+  const d = new Date(dateStr + "T00:00:00");
+  const weekday = ["日","一","二","三","四","五","六"][d.getDay()];
+  document.getElementById("cfTime").textContent = `${dateStr}（週${weekday}）${selectedTime}`;
+
+  bookingCard.hidden = true;
+  confirmCard.hidden = false;
+});
+
+document.getElementById("againBtn").addEventListener("click", () => {
+  form.reset();
+  setupDateRange();
+  renderSlots();
+  bookingCard.hidden = false;
+  confirmCard.hidden = true;
+});
+
+setupDateRange();
+renderSlots();
+</script>
+
+</body>
+</html>
